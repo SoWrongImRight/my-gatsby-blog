@@ -1,3 +1,5 @@
+# https://www.sitepoint.com/gatsby-mdx-blog/
+
 import { graphql, Link as GatsbyLink } from "gatsby";
 
 import { Heading, Box, Link } from '@theme-ui/components';
