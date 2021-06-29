@@ -1,16 +1,15 @@
-# https://www.sitepoint.com/gatsby-mdx-blog/
+// https://www.sitepoint.com/gatsby-mdx-blog/
 
 import { graphql, Link as GatsbyLink } from "gatsby";
 
 import { Heading, Box, Link } from '@theme-ui/components';
 import React from 'react';
-import { Layout } from '../components/layout';
 
 export default function IndexPage({data}) {
     return (
         <>
-            <Layout>
-                {data.allMdx.nodes.map(({id, except, frontmatter, slug }) => (
+
+                {data.allMdx.nodes.map(({id, excerpt, frontmatter, slug }) => (
                     <Box
                         key={id}
                         as='article'
@@ -28,12 +27,12 @@ export default function IndexPage({data}) {
                                     {frontmatter.date}
                                 </Box>
                                 <Box as='p' variant='styles.p'>
-                                    {except}
+                                    {excerpt}
                                 </Box>
                             </Link>
                         </Box>
                 ))}
-            </Layout>
+
         </>
     );
 }
