@@ -28,7 +28,7 @@ export const Header = ({ siteTitle, siteDescription }) => {
                             setColorMode(colorMode === 'default' ? 'dark' : 'default');
                         }}
                     >
-                        {colorMode == 'default' ? 'Dark' : 'Light'}
+                        {colorMode === 'default' ? 'Dark' : 'Light'}
                     </Button>
                 </Flex>
             </Box>
